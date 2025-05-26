@@ -1,0 +1,24 @@
+=== Dataset Analysis Report ===
+
+Total samples: 50000
+Number of features: 3
+
+=== Sentiment Distribution ===
+sentiment
+positive    25000
+negative    25000
+
+=== Text Length Statistics (characters) ===
+count    50000.000000
+mean      1309.431020
+std        989.728014
+min         32.000000
+25%        699.000000
+50%        970.000000
+75%       1590.250000
+max      13704.000000
+
+=== Missing Values ===
+review         0
+sentiment      0
+text_length    0
