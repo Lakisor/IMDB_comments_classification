@@ -6,7 +6,6 @@ from collections import Counter
 import numpy as np
 from wordcloud import WordCloud
 
-# Set style for plots
 sns.set(style="whitegrid")
 plt.rcParams['figure.figsize'] = (12, 6)
 
@@ -33,7 +32,6 @@ def analyze_sentiment_distribution(df, sentiment_col='sentiment'):
     plt.xlabel('Sentiment')
     plt.ylabel('Count')
     
-    # Add count labels on top of bars
     for p in ax.patches:
         ax.annotate(f'{p.get_height()}', 
                    (p.get_x() + p.get_width() / 2., p.get_height()),
@@ -52,7 +50,6 @@ def analyze_text_length(df, text_col='review'):
     print("\nText Length Statistics (characters):")
     print(df['text_length'].describe())
     
-    # Plot text length distribution
     plt.figure(figsize=(12, 6))
     sns.histplot(data=df, x='text_length', bins=50, kde=True)
     plt.title('Distribution of Text Lengths')
@@ -62,7 +59,6 @@ def analyze_text_length(df, text_col='review'):
     plt.savefig('data/analysis/text_length_distribution.png')
     plt.close()
     
-    # Plot text length by sentiment
     plt.figure(figsize=(12, 6))
     sns.boxplot(data=df, x='sentiment', y='text_length')
     plt.title('Text Length by Sentiment')
